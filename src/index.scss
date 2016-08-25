@@ -1,0 +1,163 @@
+$black: #4A4A4A;
+$orange: orange;
+[ui-sref] {
+  cursor: pointer;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  font-size: 14px;
+  font-family: 'Average Sans', sans-serif;
+  color: $black;
+  background: #F6F6F6;
+}
+hr {
+  border-top: 1px solid rgba(0,0,0,.1);
+  margin: 20px 0;
+}
+::-moz-selection {
+  background: $orange;
+}
+::selection {
+  background: $orange;
+}
+p {
+  margin-bottom: 1.2rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Abril Fatface', cursive;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.icon {
+  width: 40px;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+}
+$homeLgSize: 80px;
+$homeMdSize: 60px;
+$margin: 10px;
+.btn-back {
+  width: $homeMdSize;
+  height: $homeMdSize;
+  position: absolute;
+  img {
+    width: 100%;
+  }
+}
+.btn-home {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50%;
+  img {
+    width: 100%;
+  }
+  &.btn-lg {
+    margin-left: -$homeLgSize/2;
+    width: $homeLgSize;
+    height: $homeLgSize;
+    .inner {
+      width: $homeLgSize - $margin;
+      margin-left: $margin/2;
+      padding-top: $margin+2px;
+    }
+    // display: none;
+  }
+  &.btn-md {
+    background: white;
+    margin-left: -$homeMdSize/2;
+    width: $homeMdSize;
+    height: $homeMdSize;
+    .inner {
+      width: $homeMdSize - $margin;
+      margin-left: $margin/2;
+      padding-top: $margin/2;
+    }
+  }
+  &.btn-md.btn-top {
+    right: 20px;
+    top: 5px;
+    left: auto;
+    margin-left: 0;
+    bottom: auto;
+  }
+  &.btn-top-left {
+    left: 10px;
+    top: 10px;
+    right: auto;
+    margin-left: 0;
+    bottom: auto;
+  }
+  &.btn-shadow {
+    box-shadow: 0 2px 11px rgba(0,0,0,.25);
+  }
+}
+.nav,
+.text-reader {
+  margin: 18px 25px;
+}
+.nav {
+  a {
+    display: block;
+    text-decoration: none;
+    color: $black;
+    span {
+      margin: 0 10px;
+    }
+  }
+  h3 {
+    margin-bottom: 1.2rem;
+    line-height: 1.6rem;
+  }
+  p a {
+    padding: 9px 0;
+  }
+}
+.title-bar {
+  background: white;
+  h1 {
+    padding: 10px 20px;
+  }
+}
+.title-bar {
+  width: 100%;
+  h1 {
+    text-transform: capitalize;
+  }
+}
+.photo-viewer {
+  height: 75%;
+  width: 100%;
+  img {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    width: 100%;
+    height: 100%;
+  }
+}
+.text-reader {
+  height: auto;
+  z-index: 9999;
+  padding-bottom: 60px;
+}
