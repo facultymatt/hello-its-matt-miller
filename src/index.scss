@@ -1,15 +1,20 @@
+// variables
 $black: #4A4A4A;
 $orange: orange;
+$border: 1px solid rgba(0,0,0,.1);
+// angular good to have styles 
 [ng-click],
 [ui-sref] {
   cursor: pointer;
 }
+// simple reset
 * {
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
 }
+// app styles
 body,
 html {
   height: 100%;
@@ -21,7 +26,7 @@ body {
   background: #F6F6F6;
 }
 hr {
-  border-top: 1px solid rgba(0,0,0,.1);
+  border-top: $border;
   margin: 20px 0;
 }
 ::-moz-selection {
@@ -165,7 +170,6 @@ $margin: 10px;
 .text-reader {
   padding-bottom: 80px;
 }
-
 .big-screen {
   .column-1 {
     width: 25%;
@@ -183,7 +187,7 @@ $margin: 10px;
     }
   }
   .category-page {
-    margin: 40px 40px 50px 40px;
+    margin: 40px 40px 50px;
     float: left;
     clear: both;
   }
@@ -198,10 +202,10 @@ $margin: 10px;
   .title-bar {
     background: none;
   }
-  photo-viewer,
-  text-reader,
   .column-1,
-  .column-2 {
+  .column-2,
+  photo-viewer,
+  text-reader {
     float: left;
   }
   photo-viewer {
