@@ -6,6 +6,7 @@ import 'angular-media-queries';
 import 'angular-scroll';
 
 // components
+import screenFormatter from './screen-formatter';
 import {hello} from './app/hello/hello';
 import {photoViewer} from './app/photo-viewer/photo-viewer';
 import {icon} from './app/icon/icon';
@@ -27,6 +28,7 @@ export const app = 'app';
 
 angular
   .module(app, ['ui.router', 'ngSanitize', 'matchMedia', 'duScroll'])
+  .run(screenFormatter)
   .config(routesConfig)
   .component('app', hello)
   .component('icon', icon)
