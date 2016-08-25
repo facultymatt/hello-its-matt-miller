@@ -1,5 +1,6 @@
 const OFFSET = 40;
 const EMAIL = 'mattmillerart@gmail.com';
+/* eslint angular/document-service: 0 */
 export const hello = {
   template: require('./hello.html'),
   /** @ngInject */
@@ -11,7 +12,7 @@ export const hello = {
       this.email = EMAIL;
       $timeout(() => {
         const selection = $window.getSelection();
-        const range = $document.createRange();
+        const range = document.createRange();
         range.selectNodeContents($event.target);
         selection.removeAllRanges();
         selection.addRange(range);
@@ -22,7 +23,7 @@ export const hello = {
       if (screenSize.is('xs, sm')) {
         $state.go(category);
       } else {
-        const categoryElement = angular.element($document.getElementById(category));
+        const categoryElement = angular.element(document.getElementById(category));
         if (categoryElement.length) {
           $document.scrollToElementAnimated(categoryElement, OFFSET);
         }

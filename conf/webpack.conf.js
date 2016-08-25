@@ -23,9 +23,9 @@ module.exports = {
           'postcss'
         ]
       },
-      { 
-        test: /\.png$/, 
-        loader: 'file-loader?limit=100000' 
+      {
+        test: /\.png$/,
+        loader: 'file-loader?limit=100000'
       },
       {
         test: /\.js$/,
