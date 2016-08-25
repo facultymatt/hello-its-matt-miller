@@ -1,10 +1,10 @@
 <title-bar category="'Hello, I\'m Matt Miller.'"></title-bar>
 <div class="nav">
   <h3>
-    <a ui-sref="adventurer"><icon category="'adventurer'"></icon><span>Adventurer</span></a>
-    <a ui-sref="designer"><icon category="'designer'"></icon><span>Designer</span></a>
-    <a ui-sref="developer"><icon category="'developer'"></icon><span>Developer</span></a>
-    <a ui-sref="teacher"><icon category="'teacher'"></icon><span>Teacher</span></a>
+    <a du-scrollspy="developer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('developer')"><icon category="'developer'"></icon><span>Developer</span></a>
+    <a du-scrollspy="designer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('designer')"><icon category="'designer'"></icon><span>Designer</span></a>
+    <a du-scrollspy="teacher" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('teacher')"><icon category="'teacher'"></icon><span>Teacher</span></a>
+    <a du-scrollspy="adventurer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('adventurer')"><icon category="'adventurer'"></icon><span>Adventurer</span></a>
   </h3>
   <hr />
   <p>

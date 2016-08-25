@@ -6,6 +6,7 @@ export const textReader = {
       this.hello = response.data;
     });
   },
+  transclude: true,
   bindings: {
     category: '<'
   }

@@ -1,0 +1,13 @@
+<div class="big-screen">
+  <div class="column-1">
+    <app></app>
+  </div>
+  <div class="column-2">
+    <div class="category-page" ng-repeat="cat in $ctrl.categories" id="{{cat}}">
+      <photo-viewer category="cat"></photo-viewer>
+      <text-reader category="cat">
+        <icon category="cat"></icon>
+      </text-reader>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,8 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
+import 'angular-media-queries';
+import 'angular-scroll';
 
 // components
 import {hello} from './app/hello/hello';
@@ -12,6 +14,7 @@ import {textReader} from './app/text-reader/text-reader';
 import {back} from './app/back/back';
 import {category} from './app/category/category';
 import {titleBar} from './app/title-bar/title-bar';
+import {bigScreen} from './app/big-screen/big-screen';
 
 // routes
 import routesConfig from './routes';
@@ -23,7 +26,7 @@ import './index.scss';
 export const app = 'app';
 
 angular
-  .module(app, ['ui.router', 'ngSanitize'])
+  .module(app, ['ui.router', 'ngSanitize', 'matchMedia', 'duScroll'])
   .config(routesConfig)
   .component('app', hello)
   .component('icon', icon)
@@ -32,4 +35,5 @@ angular
   .component('homeButton', homeButton)
   .component('category', category)
   .component('textReader', textReader)
+  .component('bigScreen', bigScreen)
   .component('photoViewer', photoViewer);

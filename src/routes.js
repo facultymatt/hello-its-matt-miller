@@ -8,6 +8,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state('app', {
     url: '/',
     component: 'app'
+  }).state('bigScreen', {
+    url: '/big-screen',
+    component: 'bigScreen'
   }).state('adventurer', {
     url: '/adventurer',
     component: 'category',
