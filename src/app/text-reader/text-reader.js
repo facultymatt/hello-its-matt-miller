@@ -1,10 +1,8 @@
 export const textReader = {
   template: require('./text-reader.html'),
   /** @ngInject */
-  controller($http) {
-    $http.get(`text/${this.category}.html`).then(response => {
-      this.hello = response.data;
-    });
+  controller() {
+    this.hello = require(`./../../text/${this.category}.html`);
   },
   transclude: true,
   bindings: {
