@@ -1,16 +1,24 @@
 <title-bar category="'Hello, I\'m Matt Miller.'"></title-bar>
 <div class="nav">
-  <h3>
-    <a du-scrollspy="developer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('developer')"><icon category="'developer'"></icon><span>Developer</span></a>
-    <a du-scrollspy="designer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('designer')"><icon category="'designer'"></icon><span>Designer</span></a>
-    <a du-scrollspy="teacher" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('teacher')"><icon category="'teacher'"></icon><span>Teacher</span></a>
-    <a du-scrollspy="adventurer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('adventurer')"><icon category="'adventurer'"></icon><span>Adventurer</span></a>
+  <h3 class="primary-links">
+    <a title="Developer" du-scrollspy="developer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('developer')"><icon category="'developer'"></icon><span>Developer</span></a>
+    <a title="Designer" du-scrollspy="designer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('designer')"><icon category="'designer'"></icon><span>Designer</span></a>
+    <a title="Teacher" du-scrollspy="teacher" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('teacher')"><icon category="'teacher'"></icon><span>Teacher</span></a>
+    <a title="Adventurer" du-scrollspy="adventurer" offset="{{$ctrl.OFFSET}}" ng-click="$ctrl.goTo('adventurer')"><icon category="'adventurer'"></icon><span>Adventurer</span></a>
   </h3>
   <hr />
-  <p>
-    <a ng-click="$ctrl.showEmail($event)" href="mailto:mattmillerart@gmail.com">{{$ctrl.email}}</a>
-    <a href="https://calendly.com/mattmillerart/">Calender</a>
-    <a href="https://github.com/facultymatt">Github</a>
-    <a href="https://www.linkedin.com/in/mattmillerart">Linkedin</a>
+  <p ng-if="!$ctrl.doShowCredits" class="secondary-links">
+    <a title="Resume" href="https://matt-miller-resume.s3.amazonaws.com/Matt_Miller_Resume_August_2016.pdf" download>Résumé</a>
+    <a title="Linkedin" href="https://www.linkedin.com/in/mattmillerart">Linkedin</a>
+    <a title="Email" ng-click="$ctrl.showEmail($event)" href="mailto:mattmillerart@gmail.com" ng-bind-html="$ctrl.emailDisplay"></a>
+    <a title="Calendar" href="https://calendly.com/mattmillerart/">Calendar</a>
+    <a title="Github" href="https://github.com/facultymatt">Github</a>
+    <a class="credits-link" title="Credits" ng-click="$ctrl.showCredits()">Credits</a>
   </p>
+  <div class="hello-credits" ng-if="$ctrl.doShowCredits">
+    <text-reader category="'credits'">
+      <icon category="'back'" ng-click="$ctrl.showCredits(false)">
+        <icon>
+    </text-reader>
+  </div>
 </div>

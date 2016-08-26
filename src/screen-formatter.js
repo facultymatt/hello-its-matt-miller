@@ -1,6 +1,5 @@
 export default screenFormatter;
 import {throttle} from 'lodash';
-
 /** @ngInject */
 function screenFormatter($rootScope, screenSize, $state) {
   // when called with isSmall prop send user to proper screen
@@ -11,14 +10,11 @@ function screenFormatter($rootScope, screenSize, $state) {
       $state.go('bigScreen');
     }
   }
-
   // throttled version for window resize
   const respondToSizeThrottled = throttle(respondToSize, 120);
-
   // called on resize
   // @todo throttle
   screenSize.on('xs, sm', respondToSizeThrottled, $rootScope);
-
   // called on startup
   respondToSize(screenSize.is('xs, sm'));
 }

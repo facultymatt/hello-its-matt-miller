@@ -1,9 +1,10 @@
 export default routesConfig;
 
 /** @ngInject */
-function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
   $locationProvider.html5Mode(false).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
+  $urlMatcherFactoryProvider.strictMode(false);
 
   $stateProvider.state('app', {
     url: '/',
@@ -43,5 +44,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         return 'teacher';
       }
     }
+  }).state('credits', {
+    url: '/credits',
+    component: 'credits'
   });
 }

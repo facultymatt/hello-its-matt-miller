@@ -4,6 +4,7 @@ import 'angular-ui-router';
 import 'angular-sanitize';
 import 'angular-media-queries';
 import 'angular-scroll';
+import 'angular-clipboard';
 
 // components
 import screenFormatter from './screen-formatter';
@@ -16,6 +17,7 @@ import {back} from './app/back/back';
 import {category} from './app/category/category';
 import {titleBar} from './app/title-bar/title-bar';
 import {bigScreen} from './app/big-screen/big-screen';
+import {credits} from './app/credits/credits';
 
 // routes
 import routesConfig from './routes';
@@ -27,11 +29,12 @@ import './index.scss';
 export const app = 'app';
 
 angular
-  .module(app, ['ui.router', 'ngSanitize', 'matchMedia', 'duScroll'])
+  .module(app, ['ui.router', 'ngSanitize', 'matchMedia', 'duScroll', 'angular-clipboard'])
   .run(screenFormatter)
   .config(routesConfig)
   .component('app', hello)
   .component('icon', icon)
+  .component('credits', credits)
   .component('titleBar', titleBar)
   .component('back', back)
   .component('homeButton', homeButton)
