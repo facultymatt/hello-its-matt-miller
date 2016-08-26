@@ -163,10 +163,9 @@ text-reader {
     }
   }
   .secondary-links a {
-    padding: 9px 11px;
+    padding: 6px 11px;
     &.credits-link {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 1.5rem;
       font-size: 0.75rem;
     }
   }
@@ -180,6 +179,7 @@ text-reader {
 title-bar {
   background: white;
   width: 100%;
+  display: inline-block;
   h1 {
     padding: 10px 20px;
     text-transform: capitalize;
@@ -242,12 +242,16 @@ big-screen {
       transform: translateY(-50%);
     }
   }
+  a.credits-link {
+    position: absolute;
+    bottom: 20px;
+  }
   .hello-credits {
     text-reader {
       margin-left: 10px;
     }
   }
-  .title-bar {
+  title-bar {
     background: none;
   }
   .column-1,
