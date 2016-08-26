@@ -27,9 +27,14 @@ html {
 }
 body {
   font-size: 14px;
-  font-family: 'Average Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $black;
   background: #F6F6F6;
+  font-weight: 300;
+}
+li {
+  margin-left: 20px;
+  margin-bottom: 0.4rem;
 }
 hr {
   border-top: $border;
@@ -82,7 +87,7 @@ $margin: 10px;
   }
 }
 .hello-credits {
-  .text-reader {
+  text-reader {
     margin: 0;
   }
   p {
@@ -167,7 +172,7 @@ text-reader {
     padding: 4px 11px;
     &.credits-link {
       margin-top: 0.2rem;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
     }
   }
   small {
@@ -209,6 +214,11 @@ text-reader {
 }
 // big-screen
 big-screen {
+  font-size: 12px;
+  p {
+    margin-bottom: 0.6rem;
+    line-height: 1.2rem;
+  } 
   .column-1 {
     width: 25%;
     height: 100%;
