@@ -56,6 +56,8 @@ h3 {
 .icon {
   width: 40px;
   display: inline-block;
+  border-radius: 50%;
+  background: white;
   img {
     width: 100%;
     vertical-align: middle;
@@ -214,28 +216,37 @@ $margin: 10px;
     margin: 40px 40px 50px;
     float: left;
     clear: both;
+    .text-reader {
+      padding-bottom: 0;
+      margin-left: 30px;
+      margin-top: 0;
+    }
+  }
+  .hello-credits {
+    .text-reader {
+      margin-left: 10px;
+    }
   }
   .photo-viewer {
     height: 580px;
-  }
-  .text-reader {
-    padding-bottom: 0;
-    margin-left: 30px;
-    margin-top: 0;
   }
   .title-bar {
     background: none;
   }
   .column-1,
-  .column-2,
-  photo-viewer,
-  text-reader {
+  .column-2 {
     float: left;
   }
-  photo-viewer {
-    width: 50%;
-  }
-  text-reader {
-    width: 40%;
-  }
+  .column-2 {
+    photo-viewer,
+    text-reader {
+      float: left;
+    }
+    photo-viewer {
+      width: 50%;
+    }
+    text-reader {
+      width: 40%;
+    }
+  }  
 }
