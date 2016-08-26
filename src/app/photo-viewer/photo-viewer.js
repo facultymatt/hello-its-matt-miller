@@ -1,10 +1,13 @@
 export const photoViewer = {
   template: require('./photo-viewer.html'),
-  controller() {
+  /** @ngInject */
+  controller($timeout) {
     this.showImage = false;
     this.imgLoadedEvents = {
       done: () => {
-        this.showImage = true;
+        $timeout(() => {
+          this.showImage = true;
+        }, 100);
       }
     };
   },
