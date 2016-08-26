@@ -36,7 +36,9 @@ angular
     'duScroll',
     'angular-clipboard',
     require('angulartics'),
-    require('angulartics-google-analytics')
+    require('angulartics-google-analytics'),
+    require('ng-fx'),
+    require('angular-animate')
   ])
   .run(screenFormatter)
   .config(routesConfig)

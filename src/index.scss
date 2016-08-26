@@ -214,10 +214,15 @@ $margin: 10px;
   }
   .category-page {
     max-width: 1000px;
-    margin: 40px 40px 50px;
+    width: 100%;
+    min-height: 580px;
     float: left;
     clear: both;
     position: relative;
+    > .inner {
+      width: 100%;
+      margin: 40px 40px 50px;
+    }
     .text-reader {
       padding-bottom: 0;
       margin-left: 30px;
@@ -246,6 +251,7 @@ $margin: 10px;
     }
     photo-viewer {
       width: 50%;
+      min-height: 200px;
     }
     text-reader {
       width: 40%;

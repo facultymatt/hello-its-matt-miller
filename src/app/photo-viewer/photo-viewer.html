@@ -1,3 +1,3 @@
 <div class="photo-viewer">
-  <img class="photo-viewer-image" ng-src="/images/{{$ctrl.category}}.jpg" title="{{$ctrl.category}}" alt="{{$ctrl.category}}" />
+  <img ng-if="$ctrl.showImage" class="photo-viewer-image fx-fade-normal fx-dur-1200" ng-src="/images/{{$ctrl.category}}.jpg" title="{{$ctrl.category}}" alt="{{$ctrl.category}}" />
 </div>
