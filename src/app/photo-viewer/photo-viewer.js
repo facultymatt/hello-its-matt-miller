@@ -1,9 +1,12 @@
 export const photoViewer = {
   template: require('./photo-viewer.html'),
-  controller($timeout) {
-    $timeout(() => {
-      this.showImage = true;
-    }, 100);
+  controller() {
+    this.showImage = false;
+    this.imgLoadedEvents = {
+      done: () => {
+        this.showImage = true;
+      }
+    };
   },
   bindings: {
     category: '<'

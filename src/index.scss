@@ -1,8 +1,7 @@
 // variables
 $black: #4A4A4A;
 $orange: orange;
-$border: 1px solid rgba(0,0,0,.1);
-// angular good to have styles 
+$border: 1px solid rgba(0,0,0,.1); // angular good to have styles 
 [ng-click],
 [ui-sref] {
   cursor: pointer;
@@ -13,6 +12,13 @@ $border: 1px solid rgba(0,0,0,.1);
   padding: 0;
   border: none;
   outline: none;
+}
+// fix box sizing
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 // app styles
 body,
@@ -53,7 +59,7 @@ h3 {
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
 }
-.icon {
+icon {
   width: 40px;
   display: inline-block;
   border-radius: 50%;
@@ -81,7 +87,7 @@ $margin: 10px;
   p {
     margin-bottom: 0.8rem;
   }
-  .icon {
+  icon {
     position: absolute;
     bottom: 20px;
   }
@@ -135,7 +141,7 @@ $margin: 10px;
   }
 }
 .nav,
-.text-reader {
+text-reader {
   margin: 18px 25px;
 }
 .nav {
@@ -171,19 +177,16 @@ $margin: 10px;
     background: $orange;
   }
 }
-.title-bar {
+title-bar {
   background: white;
-  h1 {
-    padding: 10px 20px;
-  }
-}
-.title-bar {
   width: 100%;
   h1 {
+    padding: 10px 20px;
     text-transform: capitalize;
   }
 }
-.photo-viewer {
+// photo-viewer
+photo-viewer {
   height: 75%;
   width: 100%;
   img {
@@ -192,11 +195,17 @@ $margin: 10px;
     width: 100%;
     height: 100%;
   }
+  .photo-viewer-inner {
+    width: 100%;
+  }
 }
-.text-reader {
+// text-reader
+text-reader {
   padding-bottom: 80px;
+  float: left;
 }
-.big-screen {
+// big-screen
+big-screen {
   .column-1 {
     width: 25%;
     height: 100%;
@@ -207,7 +216,7 @@ $margin: 10px;
     margin-left: 25%;
     background: white;
     padding-bottom: 60px;
-    .icon {
+    icon {
       width: 80px;
       margin-left: -14px;
     }
@@ -220,10 +229,11 @@ $margin: 10px;
     clear: both;
     position: relative;
     > .inner {
+      float: left;
       width: 100%;
-      margin: 40px 40px 50px;
+      padding: 40px 40px 50px;
     }
-    .text-reader {
+    text-reader {
       padding-bottom: 0;
       margin-left: 30px;
       margin-top: 0;
@@ -233,7 +243,7 @@ $margin: 10px;
     }
   }
   .hello-credits {
-    .text-reader {
+    text-reader {
       margin-left: 10px;
     }
   }
@@ -256,5 +266,5 @@ $margin: 10px;
     text-reader {
       width: 40%;
     }
-  }  
+  }
 }

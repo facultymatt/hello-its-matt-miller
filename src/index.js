@@ -5,6 +5,8 @@ import 'angular-sanitize';
 import 'angular-media-queries';
 import 'angular-scroll';
 import 'angular-clipboard';
+import 'angular-images-loaded';
+import 'imagesloaded';
 
 // components
 import screenFormatter from './screen-formatter';
@@ -35,6 +37,7 @@ angular
     'matchMedia',
     'duScroll',
     'angular-clipboard',
+    'hj.imagesLoaded',
     require('angulartics'),
     require('angulartics-google-analytics'),
     require('ng-fx'),
