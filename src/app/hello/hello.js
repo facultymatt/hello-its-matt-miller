@@ -8,7 +8,7 @@ const DELAY = 3000;
 export const hello = {
   template: require('./hello.html'),
   /** @ngInject */
-  controller($window, $timeout, $state, $document, screenSize, clipboard) {
+  controller($window, $timeout, $state, $analytics, $document, screenSize, clipboard) {
     this.emailDisplay = START_HTML;
     this.OFFSET = OFFSET;
     this.doShowCredits = false;
@@ -34,6 +34,7 @@ export const hello = {
         const categoryElement = angular.element(document.getElementById(category));
         if (categoryElement.length) {
           $document.scrollToElementAnimated(categoryElement, OFFSET);
+          $analytics.pageTrack(`/${category}`);
         }
       }
     };

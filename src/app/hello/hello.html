@@ -8,12 +8,12 @@
   </h3>
   <hr />
   <p ng-if="!$ctrl.doShowCredits" class="secondary-links">
-    <a title="Resume" href="https://matt-miller-resume.s3.amazonaws.com/Matt_Miller_Resume_August_2016.pdf" download>Résumé</a>
-    <a title="Linkedin" href="https://www.linkedin.com/in/mattmillerart">Linkedin</a>
-    <a title="Email" ng-click="$ctrl.showEmail($event)" href="mailto:mattmillerart@gmail.com" ng-bind-html="$ctrl.emailDisplay"></a>
-    <a title="Calendar" href="https://calendly.com/mattmillerart/">Calendar</a>
-    <a title="Github" href="https://github.com/facultymatt">Github</a>
-    <a class="credits-link" title="Credits" ng-click="$ctrl.showCredits()">Credits</a>
+    <a analytics-on="click" analytics-event="Resume" title="Resume" href="https://matt-miller-resume.s3.amazonaws.com/Matt_Miller_Resume_August_2016.pdf" download>Résumé</a>
+    <a analytics-on="click" analytics-event="Linkedin" title="Linkedin" href="https://www.linkedin.com/in/mattmillerart">Linkedin</a>
+    <a analytics-on="click" analytics-event="Email" title="Email" ng-click="$ctrl.showEmail($event)" href="mailto:mattmillerart@gmail.com" ng-bind-html="$ctrl.emailDisplay"></a>
+    <a analytics-on="click" analytics-event="Calendar" title="Calendar" href="https://calendly.com/mattmillerart/">Calendar</a>
+    <a analytics-on="click" analytics-event="Github" title="Github" href="https://github.com/facultymatt">Github</a>
+    <a analytics-on="click" analytics-event="Credits" class="credits-link" title="Credits" ng-click="$ctrl.showCredits()">Credits</a>
   </p>
   <div class="hello-credits" ng-if="$ctrl.doShowCredits">
     <text-reader category="'credits'">

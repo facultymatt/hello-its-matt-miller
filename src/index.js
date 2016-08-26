@@ -29,7 +29,15 @@ import './index.scss';
 export const app = 'app';
 
 angular
-  .module(app, ['ui.router', 'ngSanitize', 'matchMedia', 'duScroll', 'angular-clipboard'])
+  .module(app, [
+    'ui.router',
+    'ngSanitize',
+    'matchMedia',
+    'duScroll',
+    'angular-clipboard',
+    require('angulartics'),
+    require('angulartics-google-analytics')
+  ])
   .run(screenFormatter)
   .config(routesConfig)
   .component('app', hello)
